@@ -1,0 +1,5 @@
+zuul:
+  routes:
+    cadastro:
+      path: /api/**
+      url: http://localhost:8081/api
