@@ -1,4 +1,4 @@
-package com.adriel.zuul;
+package com.alves.adriel.zuul;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
