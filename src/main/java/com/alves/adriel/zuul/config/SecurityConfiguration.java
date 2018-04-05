@@ -1,7 +1,7 @@
 package com.alves.adriel.zuul.config;
 
-import com.alves.adriel.zuul.common.JwtAuthenticationConfig;
-import com.alves.adriel.zuul.common.JwtTokenAuthenticationFilter;
+import javax.servlet.http.HttpServletResponse;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -10,7 +10,8 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
-import javax.servlet.http.HttpServletResponse;
+import com.alves.adriel.zuul.common.JwtAuthenticationConfig;
+import com.alves.adriel.zuul.common.JwtTokenAuthenticationFilter;
 
 @EnableWebSecurity
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
