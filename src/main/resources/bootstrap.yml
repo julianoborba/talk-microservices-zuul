@@ -4,3 +4,19 @@ spring:
   cloud:
     config:
       uri: http://localhost:9090
+  cache:
+    jcache:
+      config: classpath:ehcache.xml
+
+bucket4j:
+  enabled: true
+  filters:
+  - cache-name: buckets
+    filter-method: zuul
+    url: "/ddos/someservice/verylazy"
+    http-response-body: '{ "message": "Vam pará com essa brincadeira aí jovem!?" }'
+    rate-limits:
+    - bandwidths:
+      - capacity: 2
+        time: 5
+        unit: minutes
